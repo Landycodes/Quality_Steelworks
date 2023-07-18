@@ -737,10 +737,27 @@ Media Queries
 		max-width: 400px;
 		margin: 0 auto;
 	}
-	
+	.hero .myrow .mycol {
+		align-items: flex-start;
+	}
 	.hero-content {
-		margin-top: -150px;
-		background-color: black;
+		margin-top: 120px;
+	}
+
+	.hero {
+		background: linear-gradient(rgba(0, 0, 0, 0.3), 
+		rgba(0, 0, 0, 0.3));
+    background-image: url("./assets/5.jpg"), url("./assets/10.jpg"), url("./assets/156.jpg"), url("./assets/152.jpg");
+	background-repeat: no-repeat;
+	background-position: right, left top, left, right top;
+	background-size: 50%, 50%, 50%, 50%;
+	height: 100%;
+	width: 100%;
+	}
+
+	#work {
+		padding-top: 0;
+		margin-top: -100px;
 	}
 }
 
@@ -772,14 +789,23 @@ Media Queries
 	font-size: 6em;
 	color: #9BFF69;
 }
+
+.hero {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), 
+	rgba(0, 0, 0, 0.3));
+background-image: url("./assets/5.jpg"), url("./assets/10.jpg"), url("./assets/156.jpg"), url("./assets/152.jpg");
+background-repeat: no-repeat;
+background-position: right, left top, left, right top;
+background-size: 50%, 50%, 50%, 50%;
+height: 100%;
+width: 100%;
+}
 }
 
 @media(max-width: 500px) {
 	
 	.hero-content {
 		margin-top: -300px;
-		background-color: black;
-
 	}
 	
 	.hero h1 {
