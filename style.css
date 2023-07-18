@@ -6,6 +6,12 @@ font-family: 'Questrial', sans-serif;
 ================================================== 
 */
 
+/* Stop safari browser from changing text color for  phone numbers */
+a[href^=tel] {
+	text-decoration: inherit;
+	color: inherit;
+}
+
 *,
 *:before,
 *:after {
