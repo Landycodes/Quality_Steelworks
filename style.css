@@ -805,7 +805,7 @@ width: 100%;
 @media(max-width: 500px) {
 	
 	.hero-content {
-		margin-top: -300px;
+		margin-top: 127px;
 	}
 	
 	.hero h1 {
@@ -851,7 +851,7 @@ width: 100%;
 
 .underline {
 	height: 2px;
-	width: 50px;
+	width: 77px;
 	margin: 0 auto;
 	background: #9BFF69;
 }
@@ -864,6 +864,14 @@ width: 100%;
 #home .svg-inline--fa {
 	font-size: 6em;
 	color: #9BFF69;
+}
+
+.hero-content {
+	margin-top: 110px;
+}
+
+#work {
+	margin-top: -175px;
 }
 }
 
