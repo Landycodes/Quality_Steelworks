@@ -859,6 +859,7 @@ width: 100%;
 .hero h2 {
 	line-height: 1em;
 	font-size: .975em;
+	text-align: center;
 }
 
 #home .svg-inline--fa {
@@ -867,11 +868,11 @@ width: 100%;
 }
 
 .hero-content {
-	margin-top: 110px;
+	margin-top: 127px;
 }
 
 #work {
-	margin-top: -175px;
+	margin-top: -190px;
 }
 }
 
