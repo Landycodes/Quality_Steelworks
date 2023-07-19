@@ -594,12 +594,14 @@ Contact
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 select,
 textarea {
 	background: transparent;
 	width: 100%;
 	padding: 12px;
-	border: 1px solid rgba(244, 244, 249, 1);
+	border: 1px solid #222;
 	border-radius: 5px;
 	box-sizing: border-box;
 	margin-top: 6px;
