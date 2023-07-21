@@ -125,3 +125,33 @@ function emailOrNumber() {
 }
 
 $("form").on("input", emailOrNumber);
+
+$("form").on("submit", async function sendForm(event) {
+  await event.preventDefault();
+  console.log("I thinks ive been sent UwU");
+  await $.ajax({
+    method: "POST",
+    url: "https://formsubmit.co/ajax/landryandrewsk8@gmail.com",
+    dataType: "json",
+    accepts: "application/json",
+    data: {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      phone_number: $("#number").val() || "N/A",
+      message: $("#message").val() || "N/A",
+      _subject: "New submission from Steelworx.com!",
+    },
+    success: (data) => console.log(data),
+    error: (err) => console.log(err),
+  });
+  $("#name").val("");
+  $("#email").val("");
+  $("#number").val("");
+  $("#message").val("");
+
+  $("#modal-container").show();
+});
+
+$("#close-modal").click(function () {
+  $("#modal-container").hide();
+});

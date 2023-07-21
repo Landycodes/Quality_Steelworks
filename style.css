@@ -12,6 +12,10 @@ a[href^=tel] {
 	color: inherit;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -142,7 +146,7 @@ STANDARD MENU
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 9999;
+	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	background: #222;
@@ -168,7 +172,7 @@ MOBILE MENU
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 9999;
+	z-index: 100;
 	display: none;
 }
 
@@ -736,6 +740,45 @@ Grid Layout
 
 /* 
 ==================================================
+Modal
+================================================== 
+*/
+#modal-container {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+	background-color: #2222228e;
+	/* display: none; */
+
+}
+
+#modal {
+	position: relative;
+	background-color: white;
+	margin: auto 0;
+	padding: 20px;
+	width: fit-content;
+	height: fit-content;
+	border: 4px solid rgb(112, 251, 251);
+	border-radius: 15px;
+	text-align: center;
+}
+#close-modal {
+	position: absolute;
+	color: red;
+	font-size: larger;
+	font-weight: bolder;
+	right: 10px;
+	top: -15px;
+	cursor: pointer;
+}
+/* 
+==================================================
 Media Queries
 ================================================== 
 */
@@ -886,9 +929,7 @@ width: 1025px;
 }
 
 @media(max-width:420px) {
-	html {
-		overflow-x: hidden;
-	}
+
 	.hero h1 {
 	font-size: 1.8em;
 	text-transform: uppercase;
