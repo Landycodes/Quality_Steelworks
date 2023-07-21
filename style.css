@@ -745,7 +745,7 @@ Modal
 */
 #modal-container {
 	position: fixed;
-	display: flex; /*changes to flex when form submitted*/
+	display: none; /*changes to flex when form submitted*/
 	flex-direction: column;
 	align-items: center;
 	top: 0;
