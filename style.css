@@ -12,9 +12,9 @@ a[href^=tel] {
 	color: inherit;
 }
 
-html {
+/* html {
 	overflow-x: hidden;
-}
+} */
 
 *,
 *:before,
@@ -745,7 +745,7 @@ Modal
 */
 #modal-container {
 	position: fixed;
-	display: flex;
+	display: flex; /*changes to flex when form submitted*/
 	flex-direction: column;
 	align-items: center;
 	top: 0;
@@ -767,6 +767,7 @@ Modal
 	border: 4px solid rgb(112, 251, 251);
 	border-radius: 15px;
 	text-align: center;
+	font-size: .7em;
 }
 #close-modal {
 	position: absolute;

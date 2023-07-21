@@ -128,7 +128,8 @@ $("form").on("input", emailOrNumber);
 
 $("form").on("submit", async function sendForm(event) {
   await event.preventDefault();
-  console.log("I thinks ive been sent UwU");
+  $(".mybtn").attr("disabled", true);
+
   await $.ajax({
     method: "POST",
     url: "https://formsubmit.co/ajax/landryandrewsk8@gmail.com",
@@ -141,17 +142,18 @@ $("form").on("submit", async function sendForm(event) {
       message: $("#message").val() || "N/A",
       _subject: "New submission from Steelworx.com!",
     },
-    success: (data) => console.log(data),
+    success: () => $("#modal-container").css("display", "flex"),
     error: (err) => console.log(err),
   });
   $("#name").val("");
   $("#email").val("");
   $("#number").val("");
   $("#message").val("");
+  $(".mybtn").attr("disabled", false);
 
-  $("#modal-container").show();
+  // $("#modal-container").show();
 });
 
 $("#close-modal").click(function () {
-  $("#modal-container").hide();
+  $("#modal-container").css("display", "none");
 });
