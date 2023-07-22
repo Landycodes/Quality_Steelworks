@@ -846,10 +846,9 @@ Media Queries
 	margin-top: -125px;
 }
 
-	/* #work {
-		padding-top: 0;
-		margin-top: -50px;
-	} */
+	#work {
+		margin-top: -250px;
+	}
 
 	.mySlides > iframe {
 		height: 260px;
@@ -911,7 +910,7 @@ Media Queries
 	margin-bottom: -15%;
 }
  #work {
-	margin-top: 100px;
+	margin-top: -450px;
  }
  .mySlides > iframe {
 	height: 320px;
@@ -1020,7 +1019,7 @@ margin-top: 25px;
 }
 
 #work {
-	margin-top: -275px;
+	margin-top: -425px;
 }
 
 .mySlides {
