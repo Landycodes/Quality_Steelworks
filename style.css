@@ -418,11 +418,20 @@ Gallery
 	  border-radius: 3px 0 0 3px;
 	}
 
+	.galUp {
+		display: none;
+	}
+
 	.myGalSlides {
 		display: none;
-		padding: 10px 60px 80px 60px;
+		padding: 10px 50px 70px 50px;
 		text-align: center;
 	  }
+	.myGalSlides > h1 {
+		font-size: 1.8em;
+		text-decoration: underline 4px #5FE8BB;
+		text-decoration-skip-ink: none;
+	}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -487,12 +496,14 @@ Reviews
 /* Slides */
 .mySlides {
   display: none;
-  padding: 80px;
+  padding: 40px 0 40px 0;
   text-align: center;
 }
 
 /* Next & previous buttons */
 .prev, .next {
+	display: none;
+	/*  */
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -521,6 +532,8 @@ Reviews
 
 /* The dot/bullet/indicator container */
 .dot-container {
+	display: none;
+	/*  */
 	position: relative;
     text-align: center;
     padding: 20px;
@@ -556,7 +569,7 @@ q {
 }
 
 .mySlides > iframe {
-	max-width: 500px;
+	max-width: 525px;
 	height: 226px;
 }
 
@@ -729,7 +742,7 @@ Modal
 #close-modal {
 	position: absolute;
 	color: red;
-	font-size: larger;
+	font-size: 1.7em;
 	font-weight: bolder;
 	right: 10px;
 	top: -15px;
@@ -802,6 +815,10 @@ Media Queries
 		margin-top: -250px;
 	}
 
+	.mySlides {
+		padding: 50px 50px 20px 50px;
+	}
+
 	.mySlides > iframe {
 		height: 260px;
 	}
@@ -864,6 +881,11 @@ Media Queries
  #work {
 	margin-top: -450px;
  }
+
+ .mySlides {
+	padding: 50px 50px 0px 50px;
+}
+
  .mySlides > iframe {
 	height: 320px;
 }
@@ -878,6 +900,25 @@ Media Queries
   .gal-next {
 	margin-left: 55px;
   }
+  .myGalSlides {
+	padding: 10px 5px 15px 5px;
+  }
+  #work > .myrow > .mycol > .slideshow-container {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+  }
+
+  .galUp {
+	cursor: pointer;
+	display: block;
+	background-color: rgba(0,0,0,0.8);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-align: center;
+	padding: 5px 50px 0 50px;
+	color: white;
+	font-size: 2em;
+}
 }
 
 @media(max-width: 500px) {
@@ -922,11 +963,15 @@ Media Queries
 }
 
 .mySlides > iframe {
-	height: 385px;
+	height: 355px;
 }
 
 .mySlides {
 	padding-bottom: 0;
+}
+
+#modal {
+	max-width: 350px;
 }
 }
 
@@ -986,7 +1031,7 @@ margin-top: 25px;
 }
 
 .mySlides {
-	padding-bottom: 90px;
+	padding-bottom: 50px;
 }
 }
 
