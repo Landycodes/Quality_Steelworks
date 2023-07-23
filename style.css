@@ -532,12 +532,15 @@ Reviews
 
 /* The dot/bullet/indicator container */
 .dot-container {
-	display: none;
-	/*  */
 	position: relative;
     text-align: center;
     padding: 20px;
     background: transparent;
+}
+
+/* hide review dots until more reviews added */
+#reviews > .wrapper > .myrow > .mycol > .dot-container {
+	display: none;
 }
 
 /* The dots/bullets/indicators */
