@@ -365,84 +365,11 @@ Home
 	align-items: center;
 	align-content: center;
 }
-
-/* 
-==================================================
-About
-================================================== 
-*/
-
-#about {
-	text-align: center;
-	Background: lightcyan;
-}
-
-#about .headers {
-	margin-bottom: 70px;
-}
-
-.img-container {
-	height: 300px;
-	width: 300px;
-	margin: 0 auto;
-}
-
-.lance {
-	background-image: url("./assets/fern.jpg");
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-	border: 10px solid #5FE8BB;
-}
-
-#about h5, #about h6 {
-	margin: 0;
-}
-
-.img-caption {
-	margin-top: 20px;
-}
-
-.about-content {
-	margin-top: 70px;
-}
  
 
 /* 
 ==================================================
-Services
-================================================== 
-*/
-
-/* #services {
-	text-align: center;
-	background: #fff;
-}
-
-#services .headers {
-	margin-bottom: 70px;
-}
-
-#services .svg-inline--fa {
-	font-size: 2em;
-	color: #279f77;
-}
-
-.icon-bg {
-	background: lightcyan;
-	height: 150px;
-	width: 150px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	border: 10px solid #5FE8BB;
-} */
-
-/* 
-==================================================
-Our Work 
+Gallery 
 ================================================== 
 */
 #work {
@@ -472,6 +399,30 @@ Our Work
     margin-top: 8px;
     vertical-align: middle;
 }
+
+.gal-prev, .gal-next {
+	cursor: pointer;
+	top: 50%;
+	width: auto;
+	margin-top: -30px;
+	padding: 16px;
+	color: #888;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  
+  .gal-prev {
+	  border-radius: 3px 0 0 3px;
+	}
+
+	.myGalSlides {
+		display: none;
+		padding: 10px 60px 80px 60px;
+		text-align: center;
+	  }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -570,13 +521,14 @@ Reviews
 
 /* The dot/bullet/indicator container */
 .dot-container {
+	position: relative;
     text-align: center;
     padding: 20px;
     background: transparent;
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot, .galDot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -915,6 +867,17 @@ Media Queries
  .mySlides > iframe {
 	height: 320px;
 }
+
+.gal-prev, .gal-next {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+  }
+  .gal-prev {
+	margin-right: 55px;
+  }
+  .gal-next {
+	margin-left: 55px;
+  }
 }
 
 @media(max-width: 500px) {

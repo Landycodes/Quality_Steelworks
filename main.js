@@ -19,34 +19,66 @@ Quote slider
 */
 
 var slideIndex = 1;
-showSlides(slideIndex);
+var galleryIndex = 1;
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+showSlides(slideIndex, false);
+showSlides(galleryIndex, true);
+
+function plusSlides(n, gallery) {
+  if (gallery) {
+    showSlides((galleryIndex += n), true);
+  } else {
+    showSlides((slideIndex += n), false);
+  }
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function currentSlide(n, gallery) {
+  if (gallery) {
+    showSlides((galleryIndex = n), true);
+    console.log(n);
+  } else {
+    showSlides((slideIndex = n), false);
+  }
 }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+function showSlides(n, gallery) {
+  if (gallery) {
+    let i;
+    let slides = document.getElementsByClassName("myGalSlides");
+    let dots = document.getElementsByClassName("galDot");
+    if (n > slides.length) {
+      galleryIndex = 1;
+    }
+    if (n < 1) {
+      galleryIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[galleryIndex - 1].style.display = "block";
+    dots[galleryIndex - 1].className += " active";
+  } else {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
   }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
 }
 
 /* 
