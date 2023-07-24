@@ -735,7 +735,7 @@ Modal
 	background-color: white;
 	margin: auto 0;
 	padding: 20px;
-	max-width: 90%;
+	max-width: 90vw;
 	width: fit-content;
 	height: fit-content;
 	border: 4px solid rgb(112, 251, 251);
@@ -806,7 +806,7 @@ Media Queries
 .hero {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), 
 		rgba(0, 0, 0, 0.3));
-    background-image: url("./assets/59.jpg");
+    background-image: url("./assets/home.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -862,7 +862,7 @@ Media Queries
 .hero {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), 
 		rgba(0, 0, 0, 0.3));
-    background-image: url("./assets/59.jpg");
+    background-image: url("./assets/home.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -919,9 +919,16 @@ Media Queries
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	text-align: center;
-	padding: 5px 50px 0 50px;
+	padding: 5px 50px 5px 50px;
 	color: white;
 	font-size: 2em;
+}
+
+.galUp > span {
+	display: inline-block;
+	transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
 }
 }
 
@@ -952,13 +959,13 @@ Media Queries
 .hero h2 {
 	line-height: 1.2em;
 	font-size: .75em;
-	margin-bottom: -20%;
+	margin-bottom: -15%;
 }
 
 .hero-content {
-	width: 55%;
-	height: 18%;
-	margin-top: 300px;
+	width: 74%;
+	height: 20%;
+	margin-top: 275px;
 }
 
 #home .svg-inline--fa {
@@ -1012,7 +1019,7 @@ Media Queries
 .hero {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), 
 	rgba(0, 0, 0, 0.3));
-background-image: url("./assets/59.jpg");
+background-image: url("./assets/home.jpg");
 background-repeat: no-repeat;
 background-position: center top;
 background-size: 100%;
