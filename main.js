@@ -168,7 +168,7 @@ $("form").on("submit", async function sendForm(event) {
 
   await $.ajax({
     method: "POST",
-    url: "https://formsubmit.co/ajax/landryandrewsk8@gmail.com",
+    url: "https://formsubmit.co/ajax/robobregon@gmail.com",
     dataType: "json",
     accepts: "application/json",
     data: {
