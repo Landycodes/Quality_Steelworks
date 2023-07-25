@@ -457,7 +457,7 @@ Gallery
 
 	.enlarge-img {
 		margin: auto 0;
-		width: 95vh;
+		width: 55vw;
 	}
 
 
@@ -852,6 +852,11 @@ Media Queries
 	.mySlides > iframe {
 		height: 260px;
 	}
+
+	.enlarge-img {
+		margin: auto 0;
+		width: 65vw;
+	}
 }
 
 @media(max-width: 600px) {
@@ -955,6 +960,10 @@ Media Queries
 	transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
 	-webkit-transform: rotate(-90deg);
+}
+
+.enlarge-img {
+	width: 70vw;
 }
 }
 
@@ -1071,6 +1080,10 @@ margin-top: 25px;
 
 .mySlides {
 	padding-bottom: 50px;
+}
+
+.enlarge-img {
+	width: 90vw;
 }
 }
 

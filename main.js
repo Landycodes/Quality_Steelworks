@@ -200,6 +200,7 @@ $(".gallery-img").click(function (event) {
   const image = document.createElement("img");
   image.src = event.target.attributes.src.value;
   image.classList.add(event.target.attributes.class.value);
+  $(image).css("border-radius", "10px");
   $(".enlarge-img").html(image);
   $(".enlarge-container").css("display", "flex");
 });
