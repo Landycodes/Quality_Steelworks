@@ -48,6 +48,13 @@ a {
 	color: #222;
 }
 
+.align-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+
 .svg-inline--fa {
 	font-size: 1.2em;
 }
@@ -359,12 +366,6 @@ Home
 	text-shadow: 2px 2px 1px #222;
 }
 
-.align-page {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-}
  
 
 /* 
@@ -432,6 +433,33 @@ Gallery
 		text-decoration: underline 4px #5FE8BB;
 		text-decoration-skip-ink: none;
 	}
+
+	.myGalSlides > .row > .column > img {
+		cursor: pointer;
+	}
+	
+	.gallery-img {
+		width: 100%;
+	}
+
+	.enlarge-container {
+		position: fixed;
+		cursor: pointer;
+		display: none; /*changes to flex when form submitted*/
+		flex-direction: column;
+		align-items: center;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 500;
+		background-color: #2222228e;
+	}
+
+	.enlarge-img {
+		margin: auto 0;
+		width: 95vh;
+	}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -561,15 +589,15 @@ Reviews
 }
 
 /* Add an italic font style to all quotes */
-q {
+/* q {
 	font-style: italic;
 	
-}
+} */
 
 /* Add a blue color to the author */
-.author {
+/* .author {
 	color: #a0a0a0;
-}
+} */
 
 .mySlides > iframe {
 	max-width: 525px;
@@ -726,8 +754,6 @@ Modal
 	height: 100%;
 	z-index: 500;
 	background-color: #2222228e;
-	/* display: none; */
-
 }
 
 #modal {
@@ -1034,9 +1060,9 @@ margin-top: 25px;
 }
 
 .hero-content {
-	width: 65%;
-	height: 18%;
-	margin-top: 50px;
+	width: 74%;
+	height: 20%;
+	margin-top: 40px;
 }
 
 #work {
@@ -1057,3 +1083,4 @@ margin-top: 25px;
 		right: 35px;
 	}
 }
+

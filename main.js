@@ -14,7 +14,7 @@ $(".close-burger").on("click", function () {
 
 /* 
 =======================================
-Quote slider
+Quote/Gallery slider
 =======================================
 */
 
@@ -94,6 +94,7 @@ $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function (event) {
+    $("#myNav").css("width", "0%");
     // On-page links
     if (
       location.pathname.replace(/^\//, "") ==
@@ -130,6 +131,7 @@ $('a[href*="#"]')
     }
   });
 
+// Contact from phone number
 function formatPhoneNumber() {
   let value = $("#number").val();
   value = value.replace(/\D/g, "");
@@ -142,6 +144,7 @@ function formatPhoneNumber() {
 }
 $("#number").on("input", formatPhoneNumber);
 
+//function to require either an email or a phone number but not both
 function emailOrNumber() {
   const phoneNumber = $("#number").val();
   const email = $("#email").val();
@@ -158,6 +161,7 @@ function emailOrNumber() {
 
 $("form").on("input", emailOrNumber);
 
+// Sends request to formsubmit
 $("form").on("submit", async function sendForm(event) {
   await event.preventDefault();
   $(".mybtn").attr("disabled", true);
@@ -186,6 +190,20 @@ $("form").on("submit", async function sendForm(event) {
   // $("#modal-container").show();
 });
 
+// exit modal button
 $("#close-modal").click(function () {
   $("#modal-container").css("display", "none");
+});
+
+// Expand picture on click
+$(".gallery-img").click(function (event) {
+  const image = document.createElement("img");
+  image.src = event.target.attributes.src.value;
+  image.classList.add(event.target.attributes.class.value);
+  $(".enlarge-img").html(image);
+  $(".enlarge-container").css("display", "flex");
+});
+
+$(".enlarge-container").click(function () {
+  $(".enlarge-container").css("display", "none");
 });
