@@ -456,8 +456,17 @@ Gallery
 	}
 
 	.enlarge-img {
+		display: flex;
+		justify-content: center;
 		margin: auto 0;
 		width: 55vw;
+	}
+
+	@media (min-width: 500px) {
+		.enlarge-img > img {
+			width: auto;
+			max-height: 98vh;
+		}
 	}
 
 
