@@ -53,6 +53,7 @@ a {
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
+	overflow: hidden;
 }
 
 .svg-inline--fa {
@@ -108,7 +109,7 @@ a {
 .section-header {
 	position: relative;
 	font-size: 3em;
-	color: #000;
+	color: transparent;
 	margin: 0 auto;
 	display: inline-block;
 }
@@ -283,6 +284,8 @@ Home
 
 #home {
 	position: relative;
+	display: flex;
+	justify-content: center;
 	height: 768px;
 	color: #fff;
 	text-align: center;
@@ -328,6 +331,10 @@ Home
 }
 
 .hero {
+	/* display: block; */
+	overflow: hidden;
+	position: absolute;
+
 	background: linear-gradient(rgba(0, 0, 0, 0.3), 
 		rgba(0, 0, 0, 0.3));
     background-image: url("./assets/home.jpg");
@@ -339,6 +346,7 @@ Home
 	margin-top: 25px;
 }
 
+
 .hero-content {
 	display: flex;
 	flex-direction: column-reverse;
@@ -349,6 +357,7 @@ Home
 	margin-top: -20px;
 	background-size: cover;
 	box-shadow: #222222 4px 6px 5px;
+
 }
 
 .hero-content > h2 {
@@ -787,6 +796,52 @@ Modal
 	top: -15px;
 	cursor: pointer;
 }
+
+/* 
+==================================================
+Animations
+================================================== 
+*/
+	@keyframes slide-up {
+		0% {
+		  transform: translateY(20%);
+		  opacity: 0;
+		}
+		25% {
+			opacity: .25;
+		}
+		50% {
+			opacity: .7;
+		}
+		100% {
+		  transform: translateY(0px);
+		  opacity: 1;
+		}
+	  }
+
+	.slide-logo {
+		animation-name: slide-up;
+		animation-duration: 1.2s;
+		animation-timing-function: ease-out;
+	}
+
+	@keyframes header-animation {
+		0% {
+			color: transparent;
+			padding: 25px;
+			transform: translateY(70%);
+		}
+		100% {
+			color: #000;
+			transform: translateY(0);
+		}
+	}
+
+	.move-text {
+        animation: header-animation 1.5s ease-out;
+		animation-fill-mode: forwards;
+	}
+
 /* 
 ==================================================
 Media Queries

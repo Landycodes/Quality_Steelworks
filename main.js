@@ -131,7 +131,11 @@ $('a[href*="#"]')
     }
   });
 
-// Contact from phone number
+/* 
+=======================================
+Contact form phone number
+=======================================
+*/
 function formatPhoneNumber() {
   let value = $("#number").val();
   value = value.replace(/\D/g, "");
@@ -161,7 +165,11 @@ function emailOrNumber() {
 
 $("form").on("input", emailOrNumber);
 
-// Sends request to formsubmit
+/* 
+=======================================
+Send request to formsubmit
+=======================================
+*/
 $("form").on("submit", async function sendForm(event) {
   await event.preventDefault();
   $(".mybtn").attr("disabled", true);
@@ -195,6 +203,12 @@ $("#close-modal").click(function () {
   $("#modal-container").css("display", "none");
 });
 
+/* 
+=======================================
+Expand picture on click
+=======================================
+*/
+
 // Expand picture on click
 $(".gallery-img").click(function (event) {
   const image = document.createElement("img");
@@ -207,4 +221,30 @@ $(".gallery-img").click(function (event) {
 
 $(".enlarge-container").click(function () {
   $(".enlarge-container").css("display", "none");
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const logo = entry.target.querySelector(".hero-content");
+    const header = entry.target.querySelector(".section-header");
+
+    if (entry.isIntersecting && logo) {
+      logo.classList.add("slide-logo");
+      return;
+    } else if (!entry.isIntersecting && logo) {
+      logo.classList.remove("slide-logo");
+    }
+
+    if (entry.isIntersecting && header) {
+      header.classList.add("move-text");
+    } else if (!entry.isIntersecting && header) {
+      header.classList.remove("move-text");
+    }
+  });
+});
+
+observer.observe(document.querySelector(".hero"));
+
+document.querySelectorAll(".headers").forEach((header) => {
+  observer.observe(header);
 });
