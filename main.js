@@ -94,7 +94,6 @@ $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function (event) {
-    $("#myNav").css("width", "0%");
     // On-page links
     if (
       location.pathname.replace(/^\//, "") ==
@@ -125,6 +124,7 @@ $('a[href*="#"]')
               $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
               $target.focus(); // Set focus again
             }
+            $("#myNav").css("width", "0%");
           }
         );
       }
