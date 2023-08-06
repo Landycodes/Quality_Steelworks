@@ -214,14 +214,26 @@ $(".gallery-img").click(function (event) {
   const image = document.createElement("img");
   image.src = event.target.attributes.src.value;
   image.classList.add(event.target.attributes.class.value);
+  image.classList.add("expand-img");
   $(image).css("border-radius", "10px");
   $(".enlarge-img").html(image);
   $(".enlarge-container").css("display", "flex");
 });
 
 $(".enlarge-container").click(function () {
-  $(".enlarge-container").css("display", "none");
+  console.log($(".enlarge-container").html());
+  console.log($(".expand-img")[0]);
+  $(".expand-img")[0].classList.add("shrink-img");
+  $(".expand-img").on("animationend", function () {
+    $(".enlarge-container").css("display", "none");
+  });
 });
+
+/* 
+=======================================
+Animate css when element is viewable
+=======================================
+*/
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
